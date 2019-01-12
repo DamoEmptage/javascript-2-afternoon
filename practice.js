@@ -16,6 +16,11 @@
 
 //Code here
 
+const me = {
+  name: 'Damo',
+  age: 34
+}
+
 
 
 ////////// PROBLEM 2 //////////
@@ -27,6 +32,15 @@
 
 //Code here
 
+const favoriteThings = {
+  band: 'Oasis',
+  food: 'Sushi',
+  person: 'me',
+  book: 'Steve Jobs',
+  movie: 'snatch',
+  holiday: 'christmas'
+}
+
 
 
 /*
@@ -35,6 +49,8 @@
 
 //Code here
 
+favoriteThings.car = "Subaru";
+favoriteThings.brand = "twitch";
 
 
 /*
@@ -43,6 +59,8 @@
 
 //Code here
 
+favoriteThings.food = 'Chicken Nuggets';
+favoriteThings.book = 'Harry Potter';
 
 
 ////////// PROBLEM 3 //////////
@@ -57,6 +75,11 @@
 
 //Code here
 
+const backPack = []
+const item = 'firstPocket'
+backPack[item] = 'chapstick'
+
+backPack.color = 'black'
 
 
 /*
@@ -64,6 +87,11 @@
 */
 
 //Code here
+
+alert(backPack);
+
+
+
 
 
 
@@ -74,6 +102,8 @@ Instead, console.log your whole backPack object and then check out the console.
 */
 
 //Code here
+
+console.log(backPack)
 
 
 
@@ -90,15 +120,16 @@ var user2 = {
 };
 // Do not edit the code above.
 
-/* 
+/*
   Let's say I, the user, decided to change my name and email address to the following:
-  name -> 'Tyler S. McGinnis' and email -> 'tyler.mcginnis@devmounta.in'. 
+  name -> 'Tyler S. McGinnis' and email -> 'tyler.mcginnis@devmounta.in'.
   Make that change without modifying the original object code above.
 */
 
 //Code Here
 
-
+user2.name = 'Tyler S. McGinnis'
+user2.email = 'tyler.mcginnis@devmounta.in'
 
 
 
@@ -121,14 +152,19 @@ var user2 = {
 
 //Code Here
 
+const methodCollection = {}
+
 
 
 /*
-  Now add two methods (functions that are properties on objects) to your methodCollection object. 
-  One called 'alertHello' which alerts 'hello' and another method called 'logHello' which logs 'hello' to the console. 
+  Now add two methods (functions that are properties on objects) to your methodCollection object.
+  One called 'alertHello' which alerts 'hello' and another method called 'logHello' which logs 'hello' to the console.
 */
 
 //Code Here
+
+methodCollection.alertHello = () => alert('hello')
+methodCollection.logHello = () => console.log('hello')
 
 
 
@@ -138,16 +174,30 @@ var user2 = {
 
 //Code Here
 
+methodCollection.alertHello();
+methodCollection.logHello();
+
 
 
 ////////// PROBLEM 6 //////////
 
-/* 
-  Create a function called makePerson which takes in name, birthday, ssn as its parameters. 
+/*
+  Create a function called makePerson which takes in name, birthday, ssn as its parameters.
   Return a new object with all of the information that you passed in.
 */
 
 //Code Here
+
+
+function makePerson(name, birthday, ssn) {
+  const person = {
+    name: name,
+    birthday: birthday,
+    ssn: ssn
+  }
+  return person;
+}
+makePerson("Damo", 10 / 28 / 1984, "xxx-xx-xxxx");
 
 
 
@@ -159,5 +209,14 @@ var user2 = {
 */
 
 //Code Here
+
+function makeCard(cardNumber, expirationDate, securityCode) {
+  const newCreditCrd = {
+    cardNumber: cardNumber,
+    securityCode: securityCode
+  }
+  return newCreditCrd
+}
+makeCard();
 
 
